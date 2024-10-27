@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+<section>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2 class="display-5 fw-bold">{{job.title}}</h2>
+            <p class="col-md-8 fs-5 mt-3"> 
+                {{job.state}} | Remote | NGN{{job.salary|intcomma}}
+            </p>
+            {% if has_applied == False %}
+            <a href="{% url 'apply-to-job' job.pk %}" class="btn btn-primary btn-lg">Apply Now</a>
+            {% else %}
+            <p><span class="text-danger">You have already applied for this job</span></p>
+            {% endif %}
+        </div>
+    </div>  
+</section>
+
+<div>
+    <section>
+        <h5>Job Requirements</h5>
+        <p>
+            {{job.requirement}}
+        </p>  
+    </section>
+</div> <br>
+
+<div>
+    <section>
+        <h5>Ideal Candidate</h5>
+        <p>
+            {{job.ideal_candidate}}
+        </p>  
+    </section>
+</div> <br>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Other Details</h5> 
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer. 
+                </p>
+            </div>
+            <div class="card-footer"> 
+                <small class="text-muted">Last updated 3 mins ago</small> 
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">About the Company</h5> 
+                <p class="card-text">{{job.company.name}}</p>
+                <p class="card-text">{{job.company.city}}, {{job.company.state}}</p>
+                <p class="card-text">{{job.company.est_date}}</p>
+            </div>
+            <div class="card-footer"> 
+                <small class="text-muted">Last updated 3 mins ago</small> 
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Related Jobs</h5> 
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer. 
+                </p>
+            </div>
+            <div class="card-footer"> 
+                <small class="text-muted">Last updated 3 mins ago</small> 
+            </div>
+        </div>
+    </div>
+</div> <br>
+
+{% endblock content %}
+
+
+ 
+</div> <div> db.sqlite3 135 </div> manage.py 136 < div class="col"> 137 138 139 148 141 > OUTLINE 142 <div class="card h-100"> <div class="card-body"> <h5 class="card-title">About the Company</h5> <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p> 143 </div>
+
+
+
+et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 26 </p> 27 </section> 28 </div> <br>
